@@ -8,7 +8,7 @@ pub struct Device {
     mac_addr: String,
     powered: bool,
     adapter: String,
-    Mode: DeviceMode
+    mode: DeviceMode
 }
 
 impl Device {

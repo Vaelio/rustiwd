@@ -14,5 +14,5 @@ enum NetworkSecurity {
 pub struct Network {
     name: String,
     security: NetworkSecurity,
-    Signal: SignalRange
+    signal: SignalRange
 }

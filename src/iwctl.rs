@@ -1,7 +1,7 @@
 use crate::networks::Network;
 use crate::devices::Device;
 use std::process::Command;
-use std::time::{Instant, Duration};
+use std::time::Instant;
 
 
 struct IwController<'a> {
@@ -22,7 +22,7 @@ impl IwController<'_> {
 
     fn get_networks(&mut self) -> Result<(), Box<dyn std::error::Error>> {
         if self.last_scan.elapsed().as_secs() > 10 {
-            self.scan();
+            self.scan()?;
             self.last_scan = Instant::now();
         }
 
